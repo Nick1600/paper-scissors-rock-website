@@ -7,6 +7,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@500&family=Yomogi&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -14,11 +17,26 @@
             <p class="header__instructions">Feeling lucky? Pick an option, and find out.</p>
         </header>
         <main>
+<!--OPTION-->
             <article class="option__container">
                 <div class="option one"></div>
                 <div class="option two"></div>
                 <div class="option three"></div>
             </article>
+<!--VS-->
+            <article class="choice-display">
+                <section class="user-choice">
+                    <h2 class="user-choice urock">You chose: Rock</h2>
+                    <h2 class="user-choice upaper">You chose: Paper</h2>
+                    <h2 class="user-choice uscissors">You chose: Scissors</h2>    
+                </section>
+                <section class="computor-choice">
+                    <h2 class="comp-choice crock">I chose: Rock</h2>
+                    <h2 class="comp-choice cpaper">I chose: Paper</h2>
+                    <h2 class="comp-choice cscissors">I chose: Scissors</h2>
+                </section>
+            </article>
+<!--RESULTS-->
             <article class="results">
                 <p class="win">Congratulations! You have outsmarted the best.</p>
                 <p class="draw">Not bad. Not great either. It's a draw.</p>

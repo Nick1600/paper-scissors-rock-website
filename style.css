@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ html {
+     font-size: 20px;
+ }
+ h1 {
+     font-size: 3rem;
+     font-family: 'Tourney', cursive;
+ }
+ h2 {
+     font-size: 2rem;
+ }
+ p {
+    font-family: 'Yomogi', cursive;
+ }
+ body {
+     height: 100vh;
+    background: rgb(82,82,82);
+    background: linear-gradient(45deg, rgba(82,82,82,1) 0%, rgba(0,0,0,1) 100%);
+    color: white;
+ }
+
+ /*HEADER*/
+ header {
+     text-align: center;
+     height: 20%;
+ }
+
+ /*OPTIONS*/
+ .option__container {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     height: 70%;
+ }
+ .option {
+     height: 200px;
+     width: 200px;
+     border-radius: 50%;
+     background-position: center;
+     background-size: contain;
+ }
+ .one {
+     background-image: url('/media/paper-img.jpg');
+ }
+ .two {
+     background-image: url('/media/scissors.img')
+ }
+ .three {
+     background-image: url('/media/rock-img.jpg')
+ }
+
+ /*VS*/
+.choice-display {
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.urock {
+    display: none;
+}
+.upaper {
+    display: none;
+}
+.uscissors {
+    display: none;
+}
+
+.crock {
+    display: none;
+}
+.cpaper {
+    display: none;
+}
+.cscissors {
+    display: none;
+}
+
+/*RESULTS*/
+.results {
+    text-align: center;
+    position: relative;
+    top: 5rem;
+
+}
+.win {
+    display: none;
+}
+.draw {
+    display: none;
+}
+.loss {
+    display: none;
+}
+
+ /*FOOTER*/
+ footer {
+     height: 10%;
+     position: absolute;
+     bottom: 0.5rem;
+     left: 0.5rem;
+ }
