@@ -18,6 +18,10 @@ const win = document.querySelector('.win');
 const draw = document.querySelector('.draw');
 const loss = document.querySelector('.loss');
 
+//Win counters
+const playerWinCount = document.querySelector('.player-wins');
+const compWinCount = document.querySelector('.computer-wins');
+
 //FUNCTIONS
 //Display
 function displayUserRock() {
@@ -81,6 +85,19 @@ function getCompChoice() {
     }
 }
 
+//Win counters
+let playerWon = 0;
+let compOne = 0;
+
+function incrementPlayerWinCount() {
+    playerWon += 1;
+    playerWinCount.innerHTML = 'Wins: ' + playerWon;
+}
+function incrementCompWinCount() {
+    compOne += 1;
+    compWinCount.innerHTML = 'Losses: ' + compOne;
+}
+
 //User choice and outcomes
 function userChoseRock() {
     displayUserRock()
@@ -92,9 +109,11 @@ function userChoseRock() {
     } else if (compChoice === 'paper') {
         displayCompPaper();
         displayLoss();
+        incrementCompWinCount();
     } else if (compChoice === 'scissors') {
         displayCompScissors();
         displayWin();
+        incrementPlayerWinCount();
     }
 }
 function userChoseScissors() {
@@ -104,9 +123,11 @@ function userChoseScissors() {
     if (compChoice === 'rock') {
         displayCompRock();
         displayLoss();
+        incrementCompWinCount();
     } else if (compChoice === 'paper') {
         displayCompPaper();
         displayWin();
+        incrementPlayerWinCount();
     } else if (compChoice === 'scissors') {
         displayCompScissors();
         displayDraw();
@@ -119,14 +140,17 @@ function userChosePaper() {
     if (compChoice === 'rock') {
         displayCompRock();
         displayWin();
+        incrementPlayerWinCount();
     } else if (compChoice === 'paper') {
         displayCompPaper();
         displayDraw();
     } else if (compChoice === 'scissors') {
         displayCompScissors();
         displayLoss();
+        incrementCompWinCount();
     }
 }
+
 
 
 //EVENT LISTENERS
