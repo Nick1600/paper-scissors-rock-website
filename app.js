@@ -14,9 +14,17 @@ const compPaper = document.querySelector('.cpaper');
 const compScissors = document.querySelector('.cscissors');
 
 //Results
-const win = document.querySelector('.win');
-const draw = document.querySelector('.draw');
-const loss = document.querySelector('.loss');
+const winOne = document.querySelector('.win-1');
+const winTwo = document.querySelector('.win-2');
+const winThree = document.querySelector('.win-3');
+
+const drawOne = document.querySelector('.draw-1');
+const drawTwo = document.querySelector('.draw-2');
+const drawThree = document.querySelector('.draw-3');
+
+const lossOne = document.querySelector('.loss-1');
+const lossTwo = document.querySelector('.loss-2');
+const lossThree = document.querySelector('.loss-3');
 
 //Win counters
 const playerWinCount = document.querySelector('.player-wins');
@@ -57,25 +65,131 @@ function displayCompScissors() {
 }
 
 function displayWin() {
-    win.style.display = 'contents';
-    draw.style.display = 'none';
-    loss.style.display = 'none';
+    let randNumber = Math.floor(Math.random() * 3);
+    
+    if (randNumber === 0) {
+        winOne.style.display = 'contents';
+        winTwo.style.display = 'none';
+        winThree.style.display = 'none';
+
+        drawOne.style.display = 'none';
+        drawTwo.style.display = 'none';
+        drawThree.style.display = 'none'
+        
+        lossOne.style.display = 'none';
+        lossTwo.style.display = 'none';
+        lossThree.style.display = 'none';
+    } else if (randNumber === 2) {
+        winOne.style.display = 'none';
+        winTwo.style.display = 'contents';
+        winThree.style.display = 'none';
+        
+        drawOne.style.display = 'none';
+        drawTwo.style.display = 'none';
+        drawThree.style.display = 'none'
+        
+        lossOne.style.display = 'none';
+        lossTwo.style.display = 'none';
+        lossThree.style.display = 'none';
+    } else if (randNumber === 3) {
+        winOne.style.display = 'none';
+        winTwo.style.display = 'none';
+        winThree.style.display = 'contents';
+        
+        drawOne.style.display = 'none';
+        drawTwo.style.display = 'none';
+        drawThree.style.display = 'none'
+        
+        lossOne.style.display = 'none';
+        lossTwo.style.display = 'none';
+        lossThree.style.display = 'none';
+    }
 }
 function displayDraw() {
-    win.style.display = 'none';
-    draw.style.display = 'contents';
-    loss.style.display = 'none';
+    let randNumber = Math.floor(Math.random() * 3);
+    if (randNumber === 0) {
+        drawOne.style.display = 'contents';
+        drawTwo.style.display = 'none';
+        drawThree.style.display = 'none'
+
+        winOne.style.display = 'none';
+        winTwo.style.display = 'none';
+        winThree.style.display = 'none';
+        
+        lossOne.style.display = 'none';
+        lossTwo.style.display = 'none';
+        lossThree.style.display = 'none';
+    } else if (randNumber === 1) {
+        drawOne.style.display = 'none';
+        drawTwo.style.display = 'contents';
+        drawThree.style.display = 'none'
+
+        winOne.style.display = 'none';
+        winTwo.style.display = 'none';
+        winThree.style.display = 'none';
+        
+        lossOne.style.display = 'none';
+        lossTwo.style.display = 'none';
+        lossThree.style.display = 'none';
+    } else if (randNumber === 2) {
+        drawOne.style.display = 'none';
+        drawTwo.style.display = 'none';
+        drawThree.style.display = 'contents'
+
+        winOne.style.display = 'none';
+        winTwo.style.display = 'none';
+        winThree.style.display = 'none';
+        
+        lossOne.style.display = 'none';
+        lossTwo.style.display = 'none';
+        lossThree.style.display = 'none';
+    }
 }
 function displayLoss() {
-    win.style.display = 'none';
-    draw.style.display = 'none';
-    loss.style.display = 'contents';
+    let randNumber = Math.floor(Math.random() * 3);
+    if (randNumber === 0) {
+        lossOne.style.display = 'contents';
+        lossTwo.style.display = 'none';
+        lossThree.style.display = 'none';
+
+        winOne.style.display = 'none';
+        winTwo.style.display = 'none';
+        winThree.style.display = 'none';
+        
+        drawOne.style.display = 'none';
+        drawTwo.style.display = 'none';
+        drawThree.style.display = 'none'
+    } else if (randNumber === 1) {
+        lossOne.style.display = 'none';
+        lossTwo.style.display = 'contents';
+        lossThree.style.display = 'none';
+
+        winOne.style.display = 'none';
+        winTwo.style.display = 'none';
+        winThree.style.display = 'none';
+        
+        drawOne.style.display = 'none';
+        drawTwo.style.display = 'none';
+        drawThree.style.display = 'none'
+    } else if (randNumber === 2) {
+        lossOne.style.display = 'none';
+        lossTwo.style.display = 'none';
+        lossThree.style.display = 'contents';
+
+        winOne.style.display = 'none';
+        winTwo.style.display = 'none';
+        winThree.style.display = 'none';
+        
+        drawOne.style.display = 'none';
+        drawTwo.style.display = 'none';
+        drawThree.style.display = 'none'
+    }
+    
 }
 
 //get comp option
 function getCompChoice() {
-    let randNumber = Math.floor(Math.random() * 3);
-    console.log(randNumber);
+    const randNumber = Math.floor(Math.random() * 3);
     if (randNumber === 0) {
         return 'rock';
     } else if (randNumber === 1) {

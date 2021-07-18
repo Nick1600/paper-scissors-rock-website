@@ -45,12 +45,15 @@
  }
  .one {
      background-image: url('/media/paper-img.jpg');
+     cursor: pointer;
  }
  .two {
-     background-image: url('/media/scissors.img')
+     background-image: url('/media/scissors.img');
+     cursor: pointer;
  }
  .three {
-     background-image: url('/media/rock-img.jpg')
+     background-image: url('/media/rock-img.jpg');
+     cursor: pointer;
  }
 
  /*VS*/
@@ -87,13 +90,13 @@
     top: 5rem;
 
 }
-.win {
+.win-1, .win-2, .win-3 {
     display: none;
 }
-.draw {
+.draw-1, .draw-2, .draw-3 {
     display: none;
 }
-.loss {
+.loss-1, .loss-2, .loss-3{
     display: none;
 }
 
